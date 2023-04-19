@@ -69,25 +69,30 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:srcCompat="@drawable/lobby_code" />
 
-    <ImageView
-        android:id="@+id/imageView40"
+    <EditText
+        android:id="@+id/LobbyCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView39"
-        app:srcCompat="@drawable/bac" />
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="117dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Lobby Code"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView41"
-        android:layout_width="350dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="177dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginBottom="158dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/search"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView40"
-        app:srcCompat="@drawable/enter" />
+        tools:text="Enter" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
