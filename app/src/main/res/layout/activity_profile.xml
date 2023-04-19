@@ -87,4 +87,25 @@
         app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:srcCompat="@drawable/gallery" />
 
+    <ImageView
+        android:id="@+id/rocket"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:srcCompat="@drawable/rocket" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="Lobby"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

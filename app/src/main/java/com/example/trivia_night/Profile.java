@@ -11,6 +11,7 @@ public class Profile extends AppCompatActivity {
     ImageView home;
     ImageView calender;
     ImageView search;
+    ImageView rocket;
 
 
     @Override
@@ -20,6 +21,7 @@ public class Profile extends AppCompatActivity {
         calender = findViewById(R.id.calender);
         home = findViewById(R.id.home);
         search = findViewById(R.id.search);
+        rocket = findViewById(R.id.rocket);
 
 // Set an OnClickListener for each ImageView
         calender.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +47,14 @@ public class Profile extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle the click event for imageView3
                 Intent intent = new Intent(Profile.this, search_friend.class);
+                startActivity(intent);
+            }
+        });
+        rocket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle the click event for imageView3
+                Intent intent = new Intent(Profile.this, lobby.class);
                 startActivity(intent);
             }
         });
