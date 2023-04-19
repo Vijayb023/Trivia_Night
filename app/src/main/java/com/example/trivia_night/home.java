@@ -1,9 +1,14 @@
 package com.example.trivia_night;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -52,6 +57,34 @@ public class home extends AppCompatActivity {
         profile = findViewById(R.id.profile);
         search = findViewById(R.id.search);
         btn_viewMap = findViewById(R.id.btn_viewMap);
+        Context context= this;
+        Handler handler = new Handler();
+
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                String channelId = "Trivia Night Channel";
+                String channelName = "Trivia Night Notification Channel";
+                int importance = NotificationManager.IMPORTANCE_DEFAULT;
+                NotificationChannel channel = new NotificationChannel(channelId, channelName, importance);
+
+                // Create a notification builder
+
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(context,channelId);
+                builder.setSmallIcon(R.drawable.screenshot1233);
+                builder.setContentTitle("Trivia Night");
+                builder.setContentText("BattleandBrew Trivia Night starts in few hours! Get Ready!");
+                builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+                // Show the notification
+                int notificationId = 1; // Unique id for the notification
+                NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                notificationManager.createNotificationChannel(channel);
+                notificationManager.notify(notificationId, builder.build());
+            }
+        };
+
+        handler.postDelayed(runnable, 30000);
 
 // Set an OnClickListener for each ImageView
         calender.setOnClickListener(new View.OnClickListener() {
