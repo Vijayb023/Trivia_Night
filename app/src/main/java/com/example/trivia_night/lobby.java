@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -15,6 +17,9 @@ public class lobby extends AppCompatActivity {
     ImageView calender;
     ImageView search;
     ImageView profile;
+
+    EditText enter;
+    Button Button3;
     private static final int MAX_PLAYERS = 6;
 
     private String lobbyCode;
@@ -64,6 +69,8 @@ public class lobby extends AppCompatActivity {
         home = findViewById(R.id.home);
         search = findViewById(R.id.search);
         profile = findViewById(R.id.profile);
+        Button3 = findViewById(R.id.button3);
+        enter = findViewById(R.id.LobbyCode);
         calender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +105,16 @@ public class lobby extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String input=enter.getText().toString();
+                if(input.equals("K35XL2")) {
+                    Intent intent = new Intent(lobby.this,lobby_main.class);
+                    startActivity(intent);
+                }
 
+            }
+        });
     }
 }
