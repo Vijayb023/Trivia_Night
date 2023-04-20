@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.UUID;
+
 public class Calendar extends AppCompatActivity {
     ImageView profile;
     ImageView home;
@@ -48,5 +50,22 @@ public class Calendar extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public void launchShare(View view) {
+        String uniqueID = UUID.randomUUID().toString();
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "http://trivianight.app/id="+uniqueID);
+
+        String title = "Share link with Trivia Night!";
+
+        Intent chooserIntent = Intent.createChooser(shareIntent,title);
+
+        if(shareIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(chooserIntent);
+        }
+
+
+
     }
 }

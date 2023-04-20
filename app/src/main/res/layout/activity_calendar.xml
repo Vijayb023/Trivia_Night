@@ -7,6 +7,20 @@
     android:background="@drawable/bg_purp"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="37dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:onClick="launchShare"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:layout_constraintVertical_bias="0.178"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+
     <ImageView
         android:id="@+id/home"
         android:layout_width="wrap_content"
@@ -47,16 +61,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/name" />
 
+
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/small_logo" />
-
 
     <CalendarView
         android:id="@+id/calendarView"
@@ -70,29 +84,63 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="402dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="18dp"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView"
         app:srcCompat="@drawable/event1" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="401dp"
-        android:layout_height="71dp"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11"
         app:srcCompat="@drawable/event2" />
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="397dp"
-        android:layout_height="72dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="56dp"
+        android:onClick="launchShare"
         app:layout_constraintBottom_toTopOf="@+id/calender"
-        app:layout_constraintStart_toStartOf="@+id/imageView12"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/event3" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="37dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="48dp"
+        android:onClick="launchShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:srcCompat="@android:drawable/ic_menu_share"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="37dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:onClick="launchShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:srcCompat="@android:drawable/ic_menu_share"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
