@@ -185,6 +185,8 @@ public class Following_Profile extends AppCompatActivity {
                                             followButton.setOnClickListener(new View.OnClickListener() {
                                                 @Override
                                                 public void onClick(View view) {
+                                                    docRef.update("followCount",FieldValue.increment(-1));
+                                                    documentReference.update("followingCount",FieldValue.increment(-1));
                                                     documentReference.update("Following",FieldValue.arrayRemove(emailOfUser));
                                                     Toast.makeText(Following_Profile.this, "Unfollowed",
                                                             Toast.LENGTH_SHORT).show();
@@ -199,6 +201,8 @@ public class Following_Profile extends AppCompatActivity {
                                                 @Override
                                                 public void onClick(View view) {
                                                     Map<String, Object> user = new HashMap<>();
+                                                    docRef.update("followCount",FieldValue.increment(1));
+                                                    documentReference.update("followingCount",FieldValue.increment(1));
 
                                                     documentReference.update("Following",FieldValue.arrayUnion(emailOfUser));
                                                     Toast.makeText(Following_Profile.this, "Following",
