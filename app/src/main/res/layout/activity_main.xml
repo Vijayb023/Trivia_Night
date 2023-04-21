@@ -95,7 +95,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:layout_width="193dp"
-        android:id="@+id/email"
+        android:id="@+id/editLoginEmail"
         android:layout_height="48dp"
         android:hint="Email"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -108,8 +108,9 @@
     <com.google.android.material.textfield.TextInputEditText
         android:layout_width="193dp"
         android:layout_height="48dp"
-        android:id="@+id/password"
+        android:id="@+id/editLoginPassword"
         android:hint="Password"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="0.388"

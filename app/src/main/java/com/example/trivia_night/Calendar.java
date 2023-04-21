@@ -19,7 +19,7 @@ public class Calendar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
-        profile = findViewById(R.id.calender);
+        profile = findViewById(R.id.profile);
         home = findViewById(R.id.home);
         search = findViewById(R.id.search);
 

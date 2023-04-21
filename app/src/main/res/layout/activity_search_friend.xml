@@ -1,252 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/bg_purp"
-    tools:context=".MainActivity">
+    tools:context=".search_friend">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/above"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_purp"
+        tools:context=".MainActivity"
 
 
-    <ImageView
-        android:id="@+id/home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/home" />
 
-    <ImageView
-        android:id="@+id/calender"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/search"
-        app:srcCompat="@drawable/calendar" />
+        >
 
-    <ImageView
-        android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/profile"
-        app:srcCompat="@drawable/search22" />
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="401dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/bac" />
 
-    <ImageView
-        android:id="@+id/profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/name" />
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="83dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="29dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+            app:layout_constraintStart_toStartOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/imageView10"
+            app:layout_constraintVertical_bias="0.88"
+            app:srcCompat="@drawable/friend_list" />
 
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="378dp"
-        android:layout_height="596dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="27dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/shape9" />
+        <ImageView
+            android:id="@+id/addFriendsPage"
+            android:layout_width="121dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/imageView10"
+            app:srcCompat="@drawable/add_fr" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="338dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView17"
-        app:srcCompat="@drawable/shape1" />
-
-    <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="338dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
-        app:srcCompat="@drawable/shape1" />
-
-    <ImageView
-        android:id="@+id/imageView25"
-        android:layout_width="338dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView23"
-        app:srcCompat="@drawable/shape1" />
-
-    <ImageView
-        android:id="@+id/imageView24"
-        android:layout_width="338dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView25"
-        app:srcCompat="@drawable/shape1" />
-
-    <ImageView
-        android:id="@+id/imageView26"
-        android:layout_width="359dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView18"
-        app:layout_constraintStart_toStartOf="@+id/imageView17"
-        app:srcCompat="@drawable/shape10" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="72dp"
-        android:text="Friends List"
-        app:layout_constraintStart_toStartOf="@+id/imageView26"
-        app:layout_constraintTop_toTopOf="@+id/imageView17" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="40dp"
-        android:text="Find Friends"
-        app:layout_constraintEnd_toEndOf="@+id/imageView26"
-        app:layout_constraintTop_toTopOf="@+id/imageView17" />
-
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="73dp"
-        android:layout_height="79dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView18"
-        app:layout_constraintTop_toTopOf="@+id/imageView18"
-        app:srcCompat="@drawable/im1" />
-
-    <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="72dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView23"
-        app:layout_constraintTop_toTopOf="@+id/imageView23"
-        app:srcCompat="@drawable/im2" />
-
-    <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView25"
-        app:layout_constraintTop_toTopOf="@+id/imageView25"
-        app:srcCompat="@drawable/im3" />
-
-    <ImageView
-        android:id="@+id/imageView30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView24"
-        app:layout_constraintTop_toTopOf="@+id/imageView24"
-        app:srcCompat="@drawable/im4" />
-
-    <ImageView
-        android:id="@+id/imageView31"
-        android:layout_width="103dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView18"
-        app:layout_constraintEnd_toEndOf="@+id/imageView18"
-        app:srcCompat="@drawable/remove1" />
-
-    <ImageView
-        android:id="@+id/imageView34"
-        android:layout_width="103dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
-        app:layout_constraintEnd_toEndOf="@+id/imageView23"
-        app:srcCompat="@drawable/remove1" />
-
-    <ImageView
-        android:id="@+id/imageView36"
-        android:layout_width="103dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView25"
-        app:layout_constraintEnd_toEndOf="@+id/imageView25"
-        app:srcCompat="@drawable/remove1" />
-
-    <ImageView
-        android:id="@+id/imageView38"
-        android:layout_width="103dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
-        app:layout_constraintEnd_toEndOf="@+id/imageView24"
-        app:srcCompat="@drawable/remove1" />
-
-    <ImageView
-        android:id="@+id/imageView32"
-        android:layout_width="103dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView18"
-        app:layout_constraintStart_toEndOf="@+id/imageView27"
-        app:srcCompat="@drawable/viewp1" />
-
-    <ImageView
-        android:id="@+id/imageView33"
-        android:layout_width="103dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
-        app:layout_constraintStart_toEndOf="@+id/imageView28"
-        app:srcCompat="@drawable/viewp1" />
-
-    <ImageView
-        android:id="@+id/imageView35"
-        android:layout_width="103dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView25"
-        app:layout_constraintStart_toEndOf="@+id/imageView29"
-        app:srcCompat="@drawable/viewp1" />
-
-    <ImageView
-        android:id="@+id/imageView37"
-        android:layout_width="103dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
-        app:layout_constraintStart_toEndOf="@+id/imageView30"
-        app:srcCompat="@drawable/viewp1" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/above"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/below"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_purp"
+        tools:context=".MainActivity"
+        android:layout_below="@id/listView"
+
+        >
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/calender"
+            android:layout_width="46dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="49dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/search"
+            app:srcCompat="@drawable/calendar" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="46dp"
+            android:layout_marginBottom="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/profile"
+            app:srcCompat="@drawable/search22" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="51dp"
+            android:layout_marginBottom="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
