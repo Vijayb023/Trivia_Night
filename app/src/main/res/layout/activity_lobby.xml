@@ -78,7 +78,7 @@
         android:background="@color/white"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter Lobby Code"
+        android:hint="Enter the Lobby Code"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent" />
 
